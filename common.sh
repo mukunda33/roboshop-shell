@@ -141,7 +141,7 @@ python() {
   pip3.6 install -r requirements.txt &>>${log_file}
   status_check $?
 
-  # SystemD Function
+
   systemd_setup
 }
 
