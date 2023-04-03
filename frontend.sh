@@ -18,7 +18,7 @@ unzip /tmp/frontend.zip &>>${log_file}
 status_check $?
 
 print_head "Copying Nginx Config for RoboShop"
-cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>>${log_file}
+cp /home/centos/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>>${log_file}
 status_check $?
 
 print_head "Enabling nginx"
@@ -28,5 +28,6 @@ status_check $?
 print_head "Starting nginx"
 systemctl restart nginx &>>${log_file}
 status_check $?
+
 
 
